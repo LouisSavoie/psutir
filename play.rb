@@ -1,0 +1,1 @@
+system('ruby lib/psutir.rb')
