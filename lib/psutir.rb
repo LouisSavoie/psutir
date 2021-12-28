@@ -1,3 +1,8 @@
-require_relative 'psutir/player'
+# frozen_string_literal: true
 
-player = Player.new
+require_relative 'psutir/player'
+require_relative 'psutir/menu'
+
+# player = Player.new
+
+# Menu.show
