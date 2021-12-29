@@ -5,4 +5,4 @@ require_relative 'psutir/menu'
 
 # player = Player.new
 
-# Menu.show
+# Menu.run

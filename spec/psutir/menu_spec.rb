@@ -8,4 +8,18 @@ RSpec.describe Menu do
       expect { described_class.show }.to output(a_string_including('MENU')).to_stdout
     end
   end
+
+  describe '.process' do
+    it 'returns "new" with input "n"' do
+      expect(described_class.process('n')).to eq('new')
+    end
+
+    it 'returns "load" with input "l"' do
+      expect(described_class.process('l')).to eq('load')
+    end
+
+    it 'returns "quit" with input "q"' do
+      expect(described_class.process('q')).to eq('quit')
+    end
+  end
 end
