@@ -2,4 +2,8 @@
 
 require_relative 'psutir/menu'
 
-Menu.run
+module Psutir
+  def self.play
+    Menu.run
+  end
+end
