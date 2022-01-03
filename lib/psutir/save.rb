@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Player class
-class Player
+# Save class
+class Save
   attr_reader :name
 
   def initialize
