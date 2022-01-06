@@ -2,6 +2,7 @@
 
 require 'yaml'
 require 'psutir/save_manager'
+require 'psutir/save'
 
 RSpec.describe SaveManager do
   let(:save) { { data: 'test' } }
@@ -23,6 +24,12 @@ RSpec.describe SaveManager do
 
     it 'puts error and returns nil when save not found' do
       expect { described_class.load('test.yaml') }.to output(a_string_including('No save file now found.')).to_stdout
+    end
+  end
+
+  describe '.create' do
+    it 'creates and returns a new save' do
+      expect(described_class.create).to be_a_kind_of Save
     end
   end
 end

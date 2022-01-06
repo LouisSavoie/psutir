@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'save'
+
 # Save Manager module, manages save files and save data
 module SaveManager
   def self.save(save, file = 'save.yaml')
@@ -13,5 +15,9 @@ module SaveManager
     nil
   else
     save
+  end
+
+  def self.create
+    Save.new
   end
 end
