@@ -10,8 +10,8 @@ RSpec.describe Menu do
   end
 
   describe '.process' do
-    it 'returns "new" with input "n"' do
-      expect(described_class.process('n')).to eq('new')
+    it 'returns save with input "n"' do
+      expect(described_class.process('n')).to be_a_kind_of Save
     end
 
     it 'returns "load" with input "l"' do

@@ -20,7 +20,7 @@ module Menu
   def self.process(choice)
     case choice
     when 'n'
-      'new'
+      SaveManager.create
     when 'l'
       'load'
     when 'q'
