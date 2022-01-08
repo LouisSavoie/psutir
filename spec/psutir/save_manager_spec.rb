@@ -29,7 +29,14 @@ RSpec.describe SaveManager do
 
   describe '.create' do
     it 'creates and returns a new save' do
-      expect(described_class.create).to be_a_kind_of Save
+      expect(described_class.create('test.yaml')).to be_a_kind_of Save
+      File.delete('test.yaml')
+    end
+
+    it 'calls .save to write to file' do
+      described_class.create('test.yaml')
+      expect(YAML.safe_load(File.read('test.yaml'), [Symbol, Save])).to be_a_kind_of Save
+      File.delete('test.yaml')
     end
   end
 end

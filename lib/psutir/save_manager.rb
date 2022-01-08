@@ -17,7 +17,9 @@ module SaveManager
     save
   end
 
-  def self.create
-    Save.new
+  def self.create(file = 'save.yaml')
+    save = Save.new
+    save(save, file)
+    save
   end
 end
