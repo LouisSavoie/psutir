@@ -14,8 +14,8 @@ RSpec.describe Menu do
       expect(described_class.process('n')).to be_a_kind_of Save
     end
 
-    it 'returns "load" with input "l"' do
-      expect(described_class.process('l')).to eq('load')
+    it 'returns save with input "l"' do
+      expect(described_class.process('l')).to be_a_kind_of Save
     end
 
     it 'returns "quit" with input "q"' do

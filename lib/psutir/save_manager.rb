@@ -9,7 +9,7 @@ module SaveManager
   end
 
   def self.load(file = 'save.yaml')
-    save = YAML.safe_load(File.read(file), [Symbol])
+    save = YAML.safe_load(File.read(file), [Symbol, Save])
   rescue Errno::ENOENT
     puts 'No save file now found.'
     nil

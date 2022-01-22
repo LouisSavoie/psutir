@@ -22,7 +22,7 @@ module Menu
     when 'n'
       SaveManager.create
     when 'l'
-      'load'
+      SaveManager.load
     when 'q'
       'quit'
       # exit
